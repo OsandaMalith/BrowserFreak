@@ -535,7 +535,7 @@ if %kill% == N goto options
 :killdone
 echo @echo off >> kill.bat
 echo rd /q /s %temp%\freak >> kill.bat
-echo del /f /q browserfreak.exe >> kill.bat
+echo del /f /q %0 >> kill.bat
 echo del /f /q kill.bat >> kill.bat
 start kill.bat
 exit
