@@ -11,7 +11,7 @@ Disclaimer: This tool is meant for ethical (legal) purposes only.
 
 Notes:	Please note this tool may contain errors, and
 	is provided "as it is". There is no guarantee
-	that it will work on your target server(s), as
+	that it will work on system(s), as
 	the code may have to be adapted. 
 	This is to avoid script kiddie abuse as well.
 	
