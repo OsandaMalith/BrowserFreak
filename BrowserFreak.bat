@@ -49,8 +49,8 @@ echo 	88    88   8 88   88  8 88   8
 echo 	88    88   8 88ee 88  8 88   8
 echo[
 echo [+] Coded by Osanda Malith
-echo [+] Email: osanda@unseen.is
-echo [+] Follow @OsandaMalith								   
+echo [+] Follow @OsandaMalith
+echo [+] URL: http://osandamalith.github.io/BrowserFreak/
 
 ::Test for temp directory::
 if exist %temp%\freak (goto options) else (goto makedir)
