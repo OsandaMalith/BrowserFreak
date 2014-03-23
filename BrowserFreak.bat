@@ -11,7 +11,7 @@ Disclaimer: This tool is meant for ethical (legal) purposes only.
 
 Notes:	Please note this tool may contain errors, and
 	is provided "as it is". There is no guarantee
-	that it will work on system(s), as
+	that it will work on your target server(s), as
 	the code may have to be adapted. 
 	This is to avoid script kiddie abuse as well.
 	
@@ -49,8 +49,8 @@ echo 	88    88   8 88   88  8 88   8
 echo 	88    88   8 88ee 88  8 88   8
 echo[
 echo [+] Coded by Osanda Malith
-echo [+] Follow @OsandaMalith
-echo [+] URL: http://osandamalith.github.io/BrowserFreak/
+echo [+] Email: osanda [at] unseen.is
+echo [+] Follow @OsandaMalith								   
 
 ::Test for temp directory::
 if exist %temp%\freak (goto options) else (goto makedir)
@@ -409,7 +409,7 @@ pause > null
 goto menu
 
 :nosaveie
-start iepv.exe /stext ie.txt
+start %temp%\freak\iepv.exe /stext ie.txt
 echo [+] Press Enter to View all the Passwords
 pause > null
 type ie.txt
@@ -534,7 +534,7 @@ if %kill% == N goto options
 
 :killdone
 echo @echo off >> kill.bat
-echo rd /q /s %temp%\freak >> kill.bat
+rem echo rd /q /s %temp%\freak >> kill.bat
 echo del /f /q %0 >> kill.bat
 echo del /f /q kill.bat >> kill.bat
 start kill.bat
