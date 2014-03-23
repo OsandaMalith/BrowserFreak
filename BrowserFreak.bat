@@ -31,7 +31,7 @@ License:
 :EndComment
 title Browser Freak v1.1 Coded by Osanda Malith
 :menu
-taskkill /IM wscript.exe /F > null 2>&1
+taskkill /IM wscript.exe /F > nul 2>&1
 cls 
 color 17
 echo 8""""8                                          
@@ -58,7 +58,7 @@ if exist %temp%\freak (goto options) else (goto makedir)
 :::::::::::::::::::::::::::
 ::Making Directory temp::
 :makedir
-md %temp%\freak > null 
+md %temp%\freak > nul 
 attrib +S +H %temp%\freak
 ::Internet::
 :internet                                                       
@@ -265,7 +265,7 @@ echo Enter a Choice >.< goto l
 cls
 color 17
 ::Voice::
-taskkill /IM wscript.exe /F > null 2>&1
+taskkill /IM wscript.exe /F > nul 2>&1
 echo StrText="Welcome to the Chrome Password Dumper coded by Osanda Malith" > %temp%\freak\spk.vbs
 echo set ObjVoice=CreateObject("SAPI.SpVoice") >> %temp%\freak\spk.vbs
 echo ObjVoice.Speak StrText >> %temp%\freak\spk.vbs
@@ -287,7 +287,7 @@ echo 	88eee8 88ee8 88 8  8 88    88ee 88   8
 echo.
 echo [~] Welcome to the Chrome Password Dumper
 echo.
-call %temp%\freak\unzip.exe -o %temp%\freak\chromepass.zip -d %temp%\freak > null 2>&1
+call %temp%\freak\unzip.exe -o %temp%\freak\chromepass.zip -d %temp%\freak > nul 2>&1
 echo [!] Do you want to save the output to a text file(Y/n)
 set /p "chrome=>"
 if %chrome% == Y goto savechrome
@@ -300,17 +300,18 @@ set /p chromefile=[+] Enter a File Name:
 start %temp%\freak\ChromePass.exe /stext %chromefile%.txt
 echo [+] Successfully saved to %cd%\%chromefile%.txt
 echo [+] Press Enter to go to the Main Menu
-pause > null
+pause > nul
 goto menu
 
 :nosavechrome
 start %temp%\freak\ChromePass.exe /stext ch.txt
+timeout /t 2 /nobreak > nul
 echo [+] Press Enter to View all the Passwords
-pause > null
+pause > nul
 type ch.txt
-del /f /q ch.txt > null
+del /f /q ch.txt > nul
 echo [+] Press Enter to go to the Main Menu
-pause > null
+pause > nul
 goto menu
 
 ::FireFox::
@@ -331,13 +332,13 @@ echo	 88   8 8e  8 8e 8  8 8eee8 8eee 8eee8e
 echo	 88   8 88  8 88 8  8 88    88   88   8
 echo	 88eee8 88ee8 88 8  8 88    88ee 88   8
 ::Voice::
-taskkill /IM wscript.exe /F >> null 2>&1
+taskkill /IM wscript.exe /F >> nul 2>&1
 echo StrText="Welcome to the Firefox Password Dumper coded by Osanda Malith" > %temp%\freak\spk.vbs
 echo set ObjVoice=CreateObject("SAPI.SpVoice") >> %temp%\freak\spk.vbs
 echo ObjVoice.Speak StrText >> %temp%\freak\spk.vbs
 start %temp%\freak\spk.vbs
 ::code::
-call %temp%\freak\unzip.exe -o %temp%\freak\passwordfox.zip -d %temp%\freak > null 2>&1
+call %temp%\freak\unzip.exe -o %temp%\freak\passwordfox.zip -d %temp%\freak > nul 2>&1
 echo [~] Welcome to the Firefox Password Dumper
 echo.
 echo [!] Do you want to save the output to a text file(Y/n)
@@ -352,17 +353,18 @@ set /p firefoxfile=[+] Enter a File Name:
 start %temp%\freak\PasswordFox.exe /stext %firefoxfile%.txt
 echo [+] Successfully saved to %cd%\%firefoxfile%.txt
 echo [+] Press Enter to go to the Main Menu
-pause > null
+pause > nul
 goto menu
 
 :nosavefirefox
 start %temp%\freak\PasswordFox.exe /stext ff.txt
+timeout /t 2 /nobreak > nul
 echo [+] Press Enter to View all the Passwords
-pause > null
+pause > nul
 type ff.txt
-del /f /q ff.txt > null
+del /f /q ff.txt > nul
 echo [+] Press Enter to go to the Main Menu
-pause > null
+pause > nul
 goto menu
 
 
@@ -384,13 +386,13 @@ echo	 88   8 8e  8 8e 8  8 8eee8 8eee 8eee8e
 echo	 88   8 88  8 88 8  8 88    88   88   8
 echo	 88eee8 88ee8 88 8  8 88    88ee 88   8
 ::Voice::
-taskkill /IM wscript.exe /F > null 2>&1 
+taskkill /IM wscript.exe /F > nul 2>&1 
 echo StrText="Welcome to the Internet Explorer Password Dumper coded by Osanda Malith" > %temp%\freak\spk.vbs
 echo set ObjVoice=CreateObject("SAPI.SpVoice") >> %temp%\freak\spk.vbs
 echo ObjVoice.Speak StrText >> %temp%\freak\spk.vbs
 start %temp%\freak\spk.vbs
 ::code::
-call %temp%\freak\unzip.exe -o %temp%\freak\iepv.zip -d %temp%\freak > null 2>&1
+call %temp%\freak\unzip.exe -o %temp%\freak\iepv.zip -d %temp%\freak > nul 2>&1
 echo [~] Welcome to the Internet Explorer Password Dumper
 echo.
 echo [!] Do you want to save the output to a text file(Y/n)
@@ -405,17 +407,18 @@ set /p iefile=[+] Enter a File Name:
 start %temp%\freak\iepv.exe /stext %iefile%.txt
 echo [+] Successfully saved to %cd%\%iefile%.txt
 echo [+] Press Enter to go to the Main Menu
-pause > null
+pause > nul
 goto menu
 
 :nosaveie
 start %temp%\freak\iepv.exe /stext ie.txt
+timeout /t 2 /nobreak > nul
 echo [+] Press Enter to View all the Passwords
-pause > null
+pause > nul
 type ie.txt
 del /f /q ie.txt
 echo [+] Press Enter to go to the Main Menu
-pause > null
+pause > nul
 goto menu
 
 ::code of Opera::
@@ -437,14 +440,14 @@ echo 	88   8 88  8 88 8  8 88    88   88   8
 echo 	88eee8 88ee8 88 8  8 88    88ee 88   8         
 echo.
 ::Voice::
-taskkill /IM wscript.exe /F > null 2>&1 
+taskkill /IM wscript.exe /F > nul 2>&1 
 echo StrText="Welcome to the Opera Browser Password Dumper coded by Osanda Malith" > %temp%\freak\spk.vbs
 echo set ObjVoice=CreateObject("SAPI.SpVoice") >> %temp%\freak\spk.vbs
 echo ObjVoice.Speak StrText >> %temp%\freak\spk.vbs
 start %temp%\freak\spk.vbs
 echo [~] Welcome to the Opera Password Dumper
 echo.
-call %temp%\freak\unzip.exe -o %temp%\freak\operapassview.zip -d %temp%\freak > null 2>&1
+call %temp%\freak\unzip.exe -o %temp%\freak\operapassview.zip -d %temp%\freak > nul 2>&1
 echo [!] Do you want to save the output to a text file(Y/n)
 set /p "opera=>"
 if %opera% == Y goto saveopera 
@@ -458,17 +461,18 @@ set /p chromefile=[+] Enter a File Name:
 start %temp%\freak\OperaPassView.exe /stext %operafile%.txt
 echo [+] Successfully saved to %cd%\%operafile%.txt
 echo [+] Press Enter to go to the Main Menu
-pause > null
+pause > nul
 goto menu
 
 :nosaveopera
 start %temp%\freak\OperaPassView.exe /stext op.txt
+timeout /t 2 /nobreak > nul
 echo [+] Press Enter to View all the Passwords
-pause > null
+pause > nul
 type op.txt
-del /f /q op.txt > null
+del /f /q op.txt > nul
 echo [+] Press Enter to go to the Main Menu
-pause > null
+pause > nul
 goto menu
 
 ::ALL Dumper::
@@ -491,12 +495,12 @@ echo.
 echo [~] Welcome to the All Browser Password Dumper
 echo.
 ::Voice::
-taskkill /IM wscript.exe /F > null 2>&1 
+taskkill /IM wscript.exe /F > nul 2>&1 
 echo StrText="Welcome to the All Browser Password Dumper coded by Osanda Malith" > %temp%\freak\spk.vbs
 echo set ObjVoice=CreateObject("SAPI.SpVoice") >> %temp%\freak\spk.vbs
 echo ObjVoice.Speak StrText >> %temp%\freak\spk.vbs
 start %temp%\freak\spk.vbs
-call %temp%\freak\unzip.exe -o %temp%\freak\webbrowserpassview.zip -d %temp%\freak > null 2>&1
+call %temp%\freak\unzip.exe -o %temp%\freak\webbrowserpassview.zip -d %temp%\freak > nul 2>&1
 echo [!] Do you want to save the output to a text file(Y/n)
 set /p "all=>"
 if %all% == Y goto saveall 
@@ -510,17 +514,18 @@ set /p allfile=[+] Enter a File Name:
 start %temp%\freak\WebBrowserPassview.exe /stext %allfile%.txt
 echo [+] Successfully saved to %cd%\%allfile%.txt
 echo [+] Press Enter to go to the Main Menu
-pause > null
+pause > nul
 goto menu
 
 :nosaveall
 start %temp%\freak\WebBrowserPassview.exe /stext all.txt
+timeout /t 2 /nobreak > nul
 echo [+] Press Enter to View all the Passwords
-pause > null
+pause > nul
 type all.txt
-del /f /q all.txt > null
+del /f /q all.txt > nul
 echo [+] Press Enter to go to the Main Menu
-pause > null
+pause > nul
 goto menu
 
 
@@ -542,10 +547,10 @@ exit
 
 
 :end
-taskkill /IM WScript.exe /F > null 2>&1 
+taskkill /IM WScript.exe /F > nul 2>&1 
 exit
 
 :nointernet
 echo [-] Sorry you have no Internet Access...
-taskkill /IM WScript.exe /F > null 2>&1 
+taskkill /IM WScript.exe /F > nul 2>&1 
 exit
